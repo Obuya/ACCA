@@ -25,10 +25,8 @@ const NavigationAuth = () => (
             <div className="links" style={{transform: "translate(0px) translateX(0px)"}}>
             <Link to={ROUTES.BROWSE}><a id="browseall" className="internals" href="#browse">BROWSE ALL</a></Link>
             <Link to={ROUTES.HOME}><a id="recommended" className="internals" href="#rec">RECOMMENDED FOR YOU</a></Link>
-            <Link to={ROUTES}><a id="favourite" className="internals" href="#fav">FAVOURITE</a></Link>
-            <Link to={ROUTES.BROWSE}><img src="assets/img/persona-02.png" style={{width: "40px",marginRight: "60px",height: "40px"}}/></Link>
-                
-                
+            <Link to={ROUTES.HOME}><a id="favourite" className="internals" href="#fav">FAVOURITE</a></Link>
+            <Link to={ROUTES.ACCOUNT}><img src="assets/img/persona-02.png" style={{width: "40px",marginRight: "60px",height: "40px"}}/></Link>
                 
                 </div>
                 
@@ -66,28 +64,18 @@ const NavigationAuth = () => (
 );
  
 const NavigationNonAuth = () => (
-//   <nav className="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-//   <div className="container">
-//     <i id="idk" className="fa fa-adjust"></i>
-//   <a className="navbar-brand js-scroll-trigger" href="#page-top" style={{color: "var(--purple)"}}>wave</a>
-//    <div className="collapse navbar-collapse" id="navbarResponsive"></div>
-//    <div className="links" style={{transform: "translate(0px) translateX(0px)"}}>
-//    <button id="login" className="btn btn-primary" type="button">
-//    <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-//      </button>
-//          </div>
-//    </div>
-// </nav>
+
 <nav className="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style={{marginTop: "0px",height: "72px",width: "1140"}}>
-        <div className="container"><i className="fa fa-adjust"></i><a className="navbar-brand js-scroll-trigger" href="#page-top">wave</a>
-            <div className="collapse navbar-collapse" id="navbarResponsive"></div>
-            <div className="links" style={{transform: "translate(0px) translateX(0px)"}}>
-                <a id="browseall" className="internals" href="#browse">BROWSE ALL</a>
-                <a id="recommended" className="internals" href="#rec">RECOMMENDED FOR YOU</a>
-                <a id="favourite" className="internals" href="#fav">FAVOURITE</a></div>
-                <img src="assets/img/persona-02.png" style={{width: "40px",marginRight: "60px",height: "40px"}}/>
+<div className="container"><i className="fa fa-adjust"></i>
+  <Link to={ROUTES.LANDING}><a className="navbar-brand js-scroll-trigger" href="#page-top">wave</a></Link>
+    <div className="collapse navbar-collapse" id="navbarResponsive"></div>
+    <div className="links" style={{transform: "translate(0px) translateX(0px)"}}>
+    <Link to={ROUTES.SIGN_IN}><button id="login" className="btn btn-primary" type="button">SIGN IN</button></Link>
         </div>
-    </nav>
+        
+</div>
+</nav>
+  
 );
  
 export default Navigation;
