@@ -1,0 +1,33 @@
+#mainNav {
+    margin-top: 0px;height: 72px
+  }
+#SignIn 
+{
+    padding: 6px 12px;
+    padding-right: 20px;padding-left: 20px;background: var(--purple);
+}
+#idk{
+    width: 21.7188px;
+    height: 0px;
+    font-size: 35px;
+    transform: translate(-29px) scale(1.03) skew(0deg);
+    margin-top: -41px
+}
+.internals
+{
+    text-align: center;
+    transform: translate(-206px);
+    transform-origin: center;
+    font-size: 14.4px;
+    font-weight: normal;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+}
+#login{
+    padding: 6px 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: var(--purple);
+}
