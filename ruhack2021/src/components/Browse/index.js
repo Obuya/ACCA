@@ -16,7 +16,7 @@ class BrowsePage extends Component {
   componentDidMount() {
     this.setState({ loading: true });
  
-    this.props.firebase.rooms().on('value', snapshot => {
+    this.props.firebase.users().on('value', snapshot => {
       const roomsObject = snapshot.val();
  
       const roomsList = Object.keys(roomsObject).map(key => ({
@@ -30,13 +30,17 @@ class BrowsePage extends Component {
       });
     });
   }
- 
+  componentWillUnmount() {
+    this.props.firebase.rooms().off();
+  }
   render() {
+    const { rooms, loading } = this.state;
     return (
       <div>
         <h1>Rooms</h1>
-        <RoomItem/>
+        <RoomItem rooms={rooms}/>
       </div>
+     
     );
   }
 }
