@@ -27,10 +27,10 @@ const NavigationAuth = () => (
        <a className="internals" href="#rec">
        <Link to={ROUTES.HOME}>Home</Link>
          </a>
-         <a className="internals" href="#fav">
-         <Link to={ROUTES.ROOM}>Rooms</Link>
+         <a className="internals" href=" ">
+         <Link to={ROUTES.BROWSE}>Browse</Link>
            </a>
-           <a className="internals" href="#fav">
+           <a className="internals" href=" ">
          <Link to={ROUTES.ACCOUNT}>Account</Link>
            </a>
            <SignOutButton/>
@@ -52,15 +52,6 @@ const NavigationNonAuth = () => (
          </div>
    </div>
 </nav>
-
-  // <ul>
-  //   <li>
-  //     <Link to={ROUTES.LANDING}>Landing</Link>
-  //   </li>
-  //   <li>
-  //     <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-  //   </li>
-  // </ul>
 );
  
 export default Navigation;

@@ -1,5 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyA84qqX5L9oJdVEZVUDgv0vMUCtE0Y-ceQ",
@@ -16,6 +17,7 @@ class Firebase {
     app.initializeApp(firebaseConfig);
 
     this.auth = app.auth();
+    this.db = app.firestore();
   }
   // *** Auth API ***
  
@@ -29,6 +31,12 @@ class Firebase {
  
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
-}
+
+    // *** User API ***
  
+  user = uid => this.db.collection('users').doc(`${uid}`);
+ 
+  users = () => this.db.collection('users');
+}
+
 export default Firebase;

@@ -8,7 +8,7 @@ import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
-import RoomPage from '../Room';
+import BrowsePage from '../Browse';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -17,8 +17,10 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
-
-      <hr />
+      
+      <br />
+      <br />
+      <br />
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
@@ -30,7 +32,7 @@ const App = () => (
       />
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route exact path={ROUTES.ROOM} component={RoomPage} />
+      <Route exact path={ROUTES.BROWSE} component={BrowsePage} />
     </div>
   </Router>
 );
