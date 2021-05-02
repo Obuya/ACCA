@@ -14,7 +14,7 @@ const Landing = () => (
             </div>
             <div class="col-lg-8 mx-auto">
            <p class="text-faded mb-5">Discover your place.</p>
-           <Link to={ROUTES.SIGN_IN} ><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#services" style={{background: "#170a2a"}}>Sign Up</a> </Link>
+           <Link to={ROUTES.SIGN_UP} ><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#services" style={{background: "#170a2a"}}>Sign Up</a> </Link>
             </div>
         </div>
     </header>
