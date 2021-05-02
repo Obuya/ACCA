@@ -113,5 +113,5 @@ const Landing = () => (
   </div>
 );
 const condition = authUser => !!authUser;
- 
+ export {Landing};
 export default withAuthorization(condition)(Landing);
