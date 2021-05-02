@@ -30,7 +30,7 @@ const App = (props) => (
         component={PasswordForgetPage}
       /> */}
       
-      <Route exact path={ROUTES.HOME} component={HomePage} />
+      <Route exact path={ROUTES.HOME} component={BrowsePage} />
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route exact path={ROUTES.BROWSE} component={BrowsePage} />
       <Route exact path={ROUTES.CREATEROOM} component={CreateRoomPage} />
