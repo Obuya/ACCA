@@ -22,7 +22,6 @@ body {
   background: transparent;
   transform: translateY(640px);
   filter: brightness(200%);
-  width: 100%;
 }
 
 #members {

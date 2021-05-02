@@ -6,7 +6,7 @@ import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
 import { uuid } from 'uuidv4';
  
-const CreateRoomPage = (props) => (
+const CreateRoomPage = () => (
 
     <>
         <CreateRoomPageForm/>
@@ -26,7 +26,6 @@ class CreateRoompageBase extends Component {
       super(props);
       
       this.state = { ...INITIAL_STATE };
-     
     }
 
       render(){
@@ -43,11 +42,6 @@ class CreateRoompageBase extends Component {
                     <div class="container" id="grid">
                     <div class="row">
                         {/* {console.log(props.location)} */}
-                        // this is how you get info for firebase 
-                        {console.log(this.props.firebase.auth)}
-                        {console.log(this.props.firebase.db.collection('users'))}
-
-                        ----------------------------------------------------
                         <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-5" id="left">
                             <div class="upperLeft"></div>
                             <div class="media" id="crurrentSong"><img id="bigImg" class="mr-3" src={this.props.location.roomData.backgroundImg}/>

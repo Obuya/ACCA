@@ -15,7 +15,7 @@ const RoomItem = props => {
             //   room
             // }
           }}>
-              <div className="card">
+        <div class="card flexboxItem">
                       <div class="card-img-overlay" style={{background: `url(${room.backgroundImg}) 0% 0% / cover`}}>
                           <div class="description">
                               <h4 id="cardtitle">{room.roomName}</h4>
@@ -32,6 +32,5 @@ const RoomItem = props => {
 }
 
 const condition = authUser => !!authUser;
- 
 export default withAuthorization(condition)(RoomItem);
 

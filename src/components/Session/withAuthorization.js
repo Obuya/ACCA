@@ -11,10 +11,11 @@ const withAuthorization = condition => Component => {
     componentDidMount() {
       this.listener = this.props.firebase.auth.onAuthStateChanged(
         authUser => {
+          console.log("hii");
           if (!condition(authUser)) {
             this.props.history.push(ROUTES.LANDING);
           }
-          if (condition(authUser) && this.props.location === ROUTES.LANDING) {
+          else if (condition(!authUser)) {
             this.props.history.push(ROUTES.HOME);
           }
         },

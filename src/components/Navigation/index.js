@@ -18,19 +18,7 @@ const Navigation = () => (
 
  
 const NavigationAuth = () => (
-
-    // <nav className="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style={{marginTop: "0px",height: "72px",width: "1140"}}>
-    //     <div className="container"><i className="fa fa-adjust"></i><a className="navbar-brand js-scroll-trigger" href="#page-top">wave</a>
-    //         <div className="collapse navbar-collapse" id="navbarResponsive"></div>
-    //         <div className="links" style={{transform: "translate(0px) translateX(0px)"}}>
-    //         <Link to={ROUTES.BROWSE}><a id="browseall" className="internals" href="#browse">BROWSE ALL</a></Link>
-    //         <Link to={ROUTES.RECOMMENDED}><a id="recommended" className="internals" href="#rec">RECOMMENDED FOR YOU</a></Link>
-    //         <Link to={ROUTES.FAVOURITE}><a id="favourite" className="internals" href="#fav">FAVOURITE</a></Link>
-    //         <Link to={ROUTES.ACCOUNT}><img src="assets/img/persona-02.png" style={{width: "40px",marginRight: "60px",height: "40px"}}/></Link>
-    //     </div>
-                
-    //     </div>
-    // </nav>
+  
     <nav className="navbar navbar-light navbar-expand-md fixed-top float-xl-right navigation-clean-button">
     <div className="container-fluid">
     <Link to={ROUTES.HOME}>

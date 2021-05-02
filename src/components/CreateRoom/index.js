@@ -4,8 +4,7 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { compose } from 'recompose';
 import { uuid } from 'uuidv4';
- 
-const CreateRoomPage = () => (
+const CreateRoomPage = () => (                     
  <div>
     <CreateRoomForm />
   </div>

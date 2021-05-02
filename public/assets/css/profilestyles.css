@@ -1,4 +1,6 @@
-form {
+body {
+  background: #170a2a;
+  transform: translateX(-2px);
 }
 
 .login-clean form {
@@ -16,3 +18,108 @@ form {
   display: inline-block;
 }
 
+#header {
+  transform: translateY(176px);
+  height: 281px;
+  background: #170a2a;
+  width: 625px;
+}
+
+#idk {
+  background: #170a2a;
+  width: 599px;
+}
+
+#box {
+  height: 700px;
+}
+
+#profilePic {
+  width: 120px;
+  margin-top: -67px;
+}
+
+#username {
+  color: rgb(23,10,42);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: -25px;
+}
+
+#profileForm {
+  height: 528px;
+  width: 625px;
+}
+
+#box {
+  padding-left: 50px;
+  width: 493px;
+}
+
+#anotherBox {
+  width: 647px;
+  padding-left: 0px;
+  height: 402px;
+  margin-left: -70px;
+  margin-right: 0px;
+}
+
+#thirdBox {
+  width: 570px;
+  height: 397px;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-control.userBox {
+  color: rgb(73, 80, 87);
+  border-color: rgba(66,49,125,0.26);
+  border-radius: 7px;
+}
+
+.form-control.emailBox {
+  border-color: rgba(66,49,125,0.26);
+  width: 400px;
+  border-radius: 7px;
+}
+
+.col-md-12.content-right {
+  padding-top: 35px;
+}
+
+#saveBtn {
+  background: rgb(73,37,126);
+}
+
+#cancelBtn {
+  background: rgba(73,37,126,0.55);
+}
+
+#signoutBtn {
+  margin-top: 13PX;
+  background: rgba(23,10,42,0.18);
+  margin-left: 317px;
+  margin-right: 0px;
+}
+
+@media (max-width:767px){
+
+
+#box {
+  padding-left: 100px;
+  width: 493px;
+}
+.col-md-12.content-right {
+  padding-top: 35px;
+  margin-left: -350px;
+}
+#signoutBtn {
+  margin-top: -60PX;
+  background: rgba(23,10,42,0.18);
+  margin-left: 230px;
+  margin-right: 0px;
+}
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import RoomItem from './RoomItem'
 import * as ROUTES from '../../constants/routes';
- 
+import '../css/browsestyles.css';
 class AdminPage extends Component {
   constructor(props) {
     super(props);
@@ -50,32 +50,27 @@ class AdminPage extends Component {
       <>
         {/* {loading && <div>Loading ...</div>} */}
 
-        <div class="container mw-100 mh-100" style={{transform: "translateX(0px) translateY(102px)",height: "93px",marginTop: "15px"}}>
-        <div class="form-group col-sm"><input type="text" class="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="SEARCH" style={{fontFamily: "'Open Sans', sans-serif",width: "300px"}}/>
-            <div class="genres" style={{marginTop: "41px", height: "39px"}}>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">rap</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">pop</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">rock</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">blues</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">jazz</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">indie</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">dance</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">country</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">hip-hop</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">latin</button>
-                <button class="btn btn-primary text-capitalize genre-btn" type="button">chill</button>
-            </div>
+        <div class="container" id="search">
+        <div class="form-group col-sm"><input type="text" class="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="SEARCH"/>
+            <div class="genres">
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">rap</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">pop</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">rock</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">blues</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">jazz</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">indie</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">dance</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">country</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">hip-hop</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">latin</button>
+              <button class="btn btn-primary text-capitalize genre-btn" type="button">chill</button>
+              </div>
         </div>
-       
-    </div>
-    <div class="rooms d-flex flex-wrap-reverse">
-
-<RoomItem rooms={rooms} /> 
-  
+  </div>
+  <div class="container">
+  <RoomItem rooms={rooms} /> 
   </div>
     
-       
-        {/* <UserList users={users} /> */}
       </>
     );
   }

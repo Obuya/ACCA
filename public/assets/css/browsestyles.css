@@ -64,11 +64,10 @@
   width: 320px;
   filter: sepia(0%);
   margin: 20px;
-   border-radius: 0px;
+  border-radius: 0px;
   border-width: 0px;
   border-style: none;
   margin-right: 25px;
-
 }
 
 .form-control {
@@ -142,10 +141,10 @@
   margin-right: 15px;
 }
 
-/* .container {
+.container {
   height: 995px;
   transform: translateY(160px);
-} */
+}
 
 .card.flexboxItem {
   height: 360px;
@@ -174,17 +173,9 @@
   .form-control.pl-4.pr-4.rounded-pill {
     width: 200px;
   }
-  /* .container{
+  .container{
     margin-top: 50px;
-  } */
+  }
 }
-
-
-
-.rooms
-{
-  margin-top: 155px;
-  
-} 
 
 

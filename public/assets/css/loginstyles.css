@@ -1,6 +1,5 @@
 .login-dark {
   height: 1000px;
-  /* background: #fff4ff; */
   background-size: cover;
   position: relative;
 }
@@ -21,7 +20,7 @@
   top: 50%;
   left: 50%;
   color: #fff;
-  box-shadow: 1px 3px 3px 4px rgba(0,0,0,0.2);
+  box-shadow: 2px 3px 3px 4px rgba(0,0,0,0.2);
 }
 
 .login-dark .illustration {
