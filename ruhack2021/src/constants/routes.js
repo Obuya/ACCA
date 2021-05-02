@@ -7,4 +7,5 @@ export const BROWSE = '/browse';
 export const RECOMMENDED ='/recommended';
 export const FAVOURITE = '/favourite';
 export const ROOM = '/room';
+export const CREATEROOM = '/createRoom';
 export const PASSWORD_FORGET = '/pw-forget';

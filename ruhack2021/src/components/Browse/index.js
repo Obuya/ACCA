@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
  
 import { withFirebase } from '../Firebase';
+import RoomItem from './RoomItem'
 import * as ROUTES from '../../constants/routes';
  
 class AdminPage extends Component {
@@ -10,24 +11,25 @@ class AdminPage extends Component {
  
     this.state = {
       loading: false,
-      users: [],
+      rooms: [],
     };
   }
   componentDidMount() {
     this.setState({ loading: true });
-    const usersObject = [];
-    const observer = this.props.firebase.users().onSnapshot(docSnapshot => {
+    let roomsObject = [];
+    const observer = this.props.firebase.rooms().onSnapshot(docSnapshot => {
+      roomsObject = [];
       docSnapshot.docs.forEach(doc => {
         const data = doc.data();
-        usersObject.push(data);
+        roomsObject.push(data);
     })
-      const usersList = Object.keys(usersObject).map(key => ({
-         ...usersObject[key],
+      const roomsList = Object.keys(roomsObject).map(key => ({
+         ...roomsObject[key],
          uid: key,
        }));
-      console.log(usersList)
+      console.log(roomsList)
       this.setState({
-        users: usersList,
+        rooms: roomsList,
         loading: false,
       });
 
@@ -43,12 +45,12 @@ class AdminPage extends Component {
   }
  
   render() {
-    const { users, loading } = this.state;
+    const { rooms, loading } = this.state;
     return (
-      <div>
+      <>
         {/* {loading && <div>Loading ...</div>} */}
 
-        <div class="container" style={{transform: "translateX(0px) translateY(102px)",height: "93px",marginTop: "15px"}}>
+        <div class="container mw-100 mh-100" style={{transform: "translateX(0px) translateY(102px)",height: "93px",marginTop: "15px"}}>
         <div class="form-group col-sm"><input type="text" class="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="SEARCH" style={{fontFamily: "'Open Sans', sans-serif",width: "300px"}}/>
             <div class="genres" style={{marginTop: "41px", height: "39px"}}>
                 <button class="btn btn-primary text-capitalize genre-btn" type="button">rap</button>
@@ -64,85 +66,24 @@ class AdminPage extends Component {
                 <button class="btn btn-primary text-capitalize genre-btn" type="button">chill</button>
             </div>
         </div>
+       
     </div>
-    <div class="container" style={{marginTop: "155px",height: "995px"}}>
-    <Link to={{
-  pathname: ROUTES.ROOM + "/1",
-  state: {
-    roomId: 1,
-    backgroundImg : "url(assets/img/pic4.jpg)"
-  }
-}}>
-    <div class="card">
-            <div class="card-img-overlay" style={{background: "url(assets/img/pic4.jpg)",backgroundSize: "cover"}}>
-                <div class="description">
-                    <h4 id="cardtitle">TITLE</h4>
-                    <p id="cardpara">Paragraph</p>
-                    <p id="tag1" >JAZZ</p>
-                    <p id="tag2">8/10</p>
-                </div>
-            </div>
-        </div>
-    </Link>
-    <Link to={{
-  pathname: ROUTES.ROOM + "/2",
-  state: {
-    roomId: 2,
-    backgroundImg : "url(assets/img/pic2.jpg)"
-  }
-}}>
-    <div class="card">
-            <div class="card-img-overlay" style={{background: "url(assets/img/pic2.jpg)",backgroundSize: "cover"}}>
-                <div class="description">
-                    <h4 id="cardtitle">TITLE</h4>
-                    <p id="cardpara">Paragraph</p>
-                    <p id="tag1" >JAZZ</p>
-                    <p id="tag2">8/10</p>
-                </div>
-            </div>
-        </div>
-    </Link>
-    <Link to={{
-  pathname: ROUTES.ROOM + "/3",
-  state: {
-    roomId: 3,
-    backgroundImg : "url(assets/img/pic3.jpg)"
-  }
-}}>
-    <div class="card">
-            <div class="card-img-overlay" style={{background: "url(assets/img/pic3.jpg)",backgroundSize: "cover"}}>
-                <div class="description">
-                    <h4 id="cardtitle">TITLE</h4>
-                    <p id="cardpara">Paragraph</p>
-                    <p id="tag1" >JAZZ</p>
-                    <p id="tag2">8/10</p>
-                </div>
-            </div>
-        </div>
-    </Link>
-    </div>
+    <div class="rooms d-flex flex-wrap-reverse">
 
-        <UserList users={users} />
-      </div>
+<RoomItem rooms={rooms} /> 
+  
+  </div>
+    
+       
+        {/* <UserList users={users} /> */}
+      </>
     );
   }
 }
-const UserList = ({ users }) => (
-  <ul>
-    {users.map(user => (
-      <li key={user.uid}>
-        <span>
-          <strong>ID:</strong> {user.uid}
-        </span>
-        <span>
-          <strong>E-Mail:</strong> {user.email}
-        </span>
-        <span>
-          <strong>Username:</strong> {user.username}
-        </span>
-      </li>
-    ))}
-  </ul>
+const tagList = ({ tag }) => (
+  <>
+       <button class="btn btn-primary text-capitalize genre-btn" type="button">{tag}</button>
+  </>
 );
  
 export default withFirebase(AdminPage);

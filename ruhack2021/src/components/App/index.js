@@ -10,6 +10,7 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import BrowsePage from '../Browse';
 import RoomPage from '../Room';
+import CreateRoomPage from '../CreateRoom';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -21,7 +22,7 @@ const App = (props) => (
       <br/>
       <br/>
       <br/>
-
+  
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -33,7 +34,8 @@ const App = (props) => (
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route exact path={ROUTES.BROWSE} component={BrowsePage} />
-      <Route path="/room/:id" component={RoomPage} />
+      <Route exact path={ROUTES.CREATEROOM} component={CreateRoomPage} />
+      <Route path="/room" component={RoomPage} />
     </div>
   </Router>
 );

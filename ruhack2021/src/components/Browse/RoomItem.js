@@ -1,23 +1,33 @@
 import React from 'react';
 import { withAuthorization } from '../Session';
 import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
-const RoomItem = props => {    
-
-    const joinRoomHandler = e => {
-        //props.changed(e.target.value);
-
-    }    
+const RoomItem = props => {      
     return (
-        <ul>           
-          <dt>Artist: {props.Artist}</dt>
-            <dt>Song Name: {props.SongTitle}</dt>
-            <dt>Description: {props.discription}</dt>
-            <dt><img src={props.cover} alt="cover"></img></dt>
-            <button onClick={() => joinRoomHandler(props.roomCode)}>
-                    <Link to ="/Room">Join Room</Link>
-                </button>
-        </ul>          
+      <>
+        {props.rooms.map(room => (
+        <Link to={{
+            pathname: ROUTES.ROOM,
+            roomData : room,
+            // state: {
+            //   roomId: 1,
+            //   room
+            // }
+          }}>
+              <div className="card">
+                      <div class="card-img-overlay" style={{background: `url(${room.backgroundImg}) 0% 0% / cover`}}>
+                          <div class="description">
+                              <h4 id="cardtitle">{room.roomName}</h4>
+                              <p id="cardpara">{room.roomDes}</p>
+                              <p id="tag1" >{room.tag}</p>
+                              <p id="tag2">{room.numOfppl}/{room.roomSize}</p>
+                          </div>
+                      </div>
+                  </div>
+    </Link> 
+     ))}    
+     </>    
     );
 }
 
