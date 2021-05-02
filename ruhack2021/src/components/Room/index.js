@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import message from "./message";
  
 const RoomPage = (props) => (
     <div className="container" style={{width: "1163px"}}>
@@ -41,12 +42,18 @@ const RoomPage = (props) => (
         </div>
         <div className="col-md-6">
             <div id="chatbox"><input type="text" className="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="message"/>
+
+
                 <div className="othertext">
                     <p>Message</p>
                 </div>
+
+
                 <div className="mytext">
                     <p className="text-right">Message</p>
                 </div>
+
+
             </div>
             <div className="members"><img class="pic" src="assets/img/persona-01.png"/><img class="pic" src="assets/img/persona-03.png"/><img class="pic" src="assets/img/persona-02.png"/></div>
         </div>
