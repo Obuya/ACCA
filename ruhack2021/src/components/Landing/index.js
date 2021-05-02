@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
  
 const Landing = () => (
   <div>
     <h1>Landing Page</h1>
-    <p>The is the first thing visitors see when they join.</p>
+    <Link to={ROUTES.SIGN_IN}><button id="login" className="btn btn-primary btn-block" type="button">SIGN IN</button></Link>
+    
   </div>
 );
  

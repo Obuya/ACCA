@@ -33,11 +33,6 @@
   margin-top: 0px;
 }
 
-.description:hover {
-  transition: 0.6s;
-  background-color: #6751dd;
-}
-
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   color: #49257e;
   background-color: #fff4ff!important;

@@ -6,7 +6,6 @@ import { compose } from 'recompose';
  
 const SignUpPage = () => (
  <div>
-    <h1>SignUp</h1>
     <SignUpForm />
   </div>
 );
@@ -68,39 +67,58 @@ const INITIAL_STATE = {
       email === '' ||
       username === '';
       return (
-        <form onSubmit={this.onSubmit}>
+      <section className="login-dark">
+      <form id="postbg" method="post" onSubmit={this.onSubmit} >
+          <div className="illustration"><i className="icon ion-ios-locked-outline"></i></div>
+          <div className="form-group">
           <input
+          className="form-control"
             name="username"
             value={username}
             onChange={this.onChange}
             type="text"
-            placeholder="Full Name"
+            placeholder="User Name"
           />
+            </div>
+          <div className="form-group">
           <input
+          className="form-control"
             name="email"
             value={email}
             onChange={this.onChange}
             type="text"
             placeholder="Email Address"
           />
-          <input
+           </div>
+           <div className="form-group">
+           <input
+           className="form-control"
             name="passwordOne"
             value={passwordOne}
             onChange={this.onChange}
             type="password"
             placeholder="Password"
           />
+            </div>
+          <div className="form-group">
           <input
+          className="form-control"
             name="passwordTwo"
             value={passwordTwo}
             onChange={this.onChange}
             type="password"
             placeholder="Confirm Password"
           />
-          <button type="submit">Sign Up</button>
-   
-          {error && <p>{error.message}</p>}
-        </form>
+            </div>
+          <div className="form-group">
+            <button className="btn btn-primary btn-block" type="submit">Sign Up</button>
+            </div>
+            {/* <a className="forgot" href="">Log In with your Spotify Account.</a> */}
+            <a className="forgot" href="">Already have an Account? <Link to={ROUTES.SIGN_IN}>Sign In</Link></a>
+            {error && <p>{error.message}</p>}
+      </form>
+  </section>
+
       );
   }
 }

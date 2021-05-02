@@ -4,4 +4,7 @@ export const SIGN_IN = '/signin';
 export const HOME = '/home';
 export const ACCOUNT = '/account';
 export const BROWSE = '/browse';
+export const RECOMMENDED ='/recommended';
+export const FAVOURITE = '/favourite';
+export const ROOM = '/room';
 export const PASSWORD_FORGET = '/pw-forget';

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
  
 import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+
  
 const SignInPage = () => (
   <div>
-    <h1>SignIn</h1>
     <SignInForm />
-    <SignUpLink />
   </div>
 );
  
@@ -53,27 +52,37 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
  
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
+      <section className="login-dark">
+      <form id="postbg" method="post" onSubmit={this.onSubmit} >
+          <div className="illustration"><i className="icon ion-ios-locked-outline"></i></div>
+          <div className="form-group">
+          <input
+           className="form-control"
           name="email"
           value={email}
           onChange={this.onChange}
           type="text"
           placeholder="Email Address"
         />
-        <input
+            </div>
+          <div className="form-group">
+          <input
+          className="form-control"
           name="password"
           value={password}
           onChange={this.onChange}
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
- 
-        {error && <p>{error.message}</p>}
+            </div>
+          <div className="form-group">
+            <button disabled={isInvalid} className="btn btn-primary btn-block" type="submit">Log In</button>
+            </div>
+            {/* <a className="forgot" href="">Log In with your Spotify Account.</a> */}
+            <a className="forgot" href="">Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link></a>
+            {error && <p>{error.message}</p>}
       </form>
+  </section>
     );
   }
 }
