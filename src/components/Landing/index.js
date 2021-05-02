@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import { withAuthorization } from '../Session';
  
 const Landing = () => (
   <div>
@@ -111,5 +112,6 @@ const Landing = () => (
     
   </div>
 );
+const condition = authUser => !!authUser;
  
-export default Landing;
+export default withAuthorization(condition)(Landing);

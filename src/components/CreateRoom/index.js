@@ -25,7 +25,7 @@ const INITIAL_STATE = {
    
       this.state = { ...INITIAL_STATE };
     }
-   
+ 
     onSubmit = event => {
       const { backgroundImg, numOfppl, roomID, roomName, roomSize,tag } = this.state;
           // Create a user in your Firebase realtime database

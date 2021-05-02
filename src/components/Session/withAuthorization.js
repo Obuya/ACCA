@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import AuthUserContext from './context';
@@ -13,6 +13,9 @@ const withAuthorization = condition => Component => {
         authUser => {
           if (!condition(authUser)) {
             this.props.history.push(ROUTES.LANDING);
+          }
+          if (condition(authUser) && this.props.location === ROUTES.LANDING) {
+            this.props.history.push(ROUTES.HOME);
           }
         },
       );
