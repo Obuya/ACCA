@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { withFirebase } from '../Firebase';
 import RoomItem from './RoomItem'
 import * as ROUTES from '../../constants/routes';
-import '../css/browsestyles.css';
 class AdminPage extends Component {
   constructor(props) {
     super(props);
