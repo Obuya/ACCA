@@ -1,4 +1,13 @@
+# project Verse
 
+ A project created during RU-hacks 2021[(devpost Link)](https://devpost.com/software/verse-45dnra) in 48hrs. 
+ 
+## Contributors: 
+  - Carmen Skoretz
+  - Christina Bose Paguirigan
+  - Alp Angel S
+  - Ayub Osman Ali (myself)
+ 
 ## Inspiration
  When pondering the vast emptiness of my life, during covid, I wondered if online mediums could replace a good old music sech, in the open grassy fields of campus. (oh oh tho I miss it).  
 
